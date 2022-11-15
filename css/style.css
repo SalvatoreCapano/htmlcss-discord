@@ -260,14 +260,53 @@ body > section:last-of-type button{
 /*Footer*/
 body > footer{
     flex-direction: column;
-    padding: 15px;
+    padding: 100px;
 }
 
-body > footer .flexContainer:first-child header{
+body > footer header{
     width: 30%;
     height: 580px;
-    background-color:lightcoral;
+
+    color: white;
 }
+
+body > footer header h3{
+    font-size: 2rem;
+    font-weight: 800;
+    color:#7289da;
+    line-height: 2.3rem;
+}
+
+body > footer img{
+    width: 1.5rem;
+}
+
+body > footer header > div {
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body > footer header #languageContainer{
+    margin: 1.25rem 0;
+    font-size: 0.8rem;
+}
+
+body > footer header #languageContainer > *{
+    margin-right: 0.25rem;
+}
+
+body > footer header #socialContainer{
+    font-size: 1.3rem;
+}
+
+body > footer header #socialContainer > *{
+    margin-right: 1.5rem;
+}
+
+
 
 body > footer hr{
     margin: 30px 0;
@@ -327,6 +366,10 @@ body > footer .flexContainer:first-child .linkList{
     background-color:forestgreen;
 }
 
+.debug footer .flexContainer:first-child header{
+    background-color:lightcoral;
+}
+
  .debug .flexContainer > div,
 .debug .flexContainer > nav,
 .debug #jumbotron,
@@ -352,11 +395,10 @@ body > footer .flexContainer:first-child .linkList{
     background-color: pink;
 }
 
-.debug footer .flexContainer:first-child header{
-    background-color:lightcoral;
-}
+
 
 .debug footer .flexContainer:first-child .linkList{
     background-color:lightseagreen;
     border: 2px dashed white;
 }
+
