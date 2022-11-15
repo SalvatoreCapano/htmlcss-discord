@@ -108,7 +108,7 @@ body > header > .flexContainer > div:nth-of-type(2){
     justify-content: flex-end;
 }
 
-body > header button{
+.smallButton{
     font-size: 0.9em;
     font-weight: 600;
     color: black;
@@ -261,11 +261,12 @@ body > section:last-of-type button{
 body > footer{
     flex-direction: column;
     padding: 100px;
+
+    background-color :#23272a;
 }
 
 body > footer header{
     width: 30%;
-    height: 580px;
 
     color: white;
 }
@@ -277,7 +278,7 @@ body > footer header h3{
     line-height: 2.3rem;
 }
 
-body > footer img{
+body > footer .flexContainer:first-child img{
     width: 1.5rem;
 }
 
@@ -306,25 +307,50 @@ body > footer header #socialContainer > *{
     margin-right: 1.5rem;
 }
 
+body > footer .flexContainer:first-child {
+    align-items: flex-start;
+}
 
+body > footer .flexContainer:first-child .linkList{
+    width: calc(70% / 4);
+}
+
+body > footer .flexContainer:first-child .linkList h4{
+    color: #7289da;
+    font-weight: 800;
+}
+
+body > footer .flexContainer:first-child .linkList ul{
+    list-style: none;
+}
+
+body > footer .flexContainer:first-child .linkList ul li{
+    margin: 0.5rem 0;
+}
+
+body > footer .flexContainer:first-child .linkList ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+}
 
 body > footer hr{
     margin: 30px 0;
-    width: 1200px;
+    width: 1300px;
+    border-color:#7289da;
+    border-top: none;
 }
 
 body > footer .flexContainer:last-child{
     padding: 20px 0;
 }
-
-body > footer .flexContainer:last-child div {
-    padding: 5px 10px;
+ 
+footer .smallButton{
+    background-color: #7289da;
+    color: white;
 }
 
-body > footer .flexContainer:first-child .linkList{
-    width: calc(70% / 4);
-    height: 580px;
-}
+
 
 
 
@@ -370,19 +396,6 @@ body > footer .flexContainer:first-child .linkList{
     background-color:lightcoral;
 }
 
- .debug .flexContainer > div,
-.debug .flexContainer > nav,
-.debug #jumbotron,
-.debug > section:last-of-type > .flexContainer,*/
-.debug footer .flexContainer:first-child header
-{
-    border: 2px dashed black;
-}
-
-
-
-
-
 .debug footer{
     background-color :#23272a;
 }
@@ -391,14 +404,23 @@ body > footer .flexContainer:first-child .linkList{
     background-color: aquamarine;
 }
 
-.debug footer .flexContainer:last-child div {
-    background-color: pink;
-}
-
-
 
 .debug footer .flexContainer:first-child .linkList{
     background-color:lightseagreen;
     border: 2px dashed white;
 }
 
+.debug footer .flexContainer:last-child div {
+    background-color: pink;
+}
+
+ .debug .flexContainer > div,
+.debug .flexContainer > nav,
+.debug #jumbotron,
+.debug > section:last-of-type > .flexContainer,
+.debug footer .flexContainer:first-child header
+{
+    border: 2px dashed black;
+}
+
+*/
