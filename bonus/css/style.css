@@ -79,6 +79,11 @@ button{
     background-color: #7289da;
 }
 
+.blackButton{
+    color: white;
+    background-color: #23272a;
+}
+
 .clearfix::after {
     content: "";
     clear: both;
@@ -177,11 +182,6 @@ body > #jumbotronSection button {
     margin: 0.5em;
 }
 
-body > #jumbotronSection .bigButton:last-of-type {
-    color: white;
-    background-color: #23272a;
-}
-
 /*Sections*/
 body > section:nth-of-type(even){
     background-color: white;
@@ -243,7 +243,7 @@ body > footer{
     flex-direction: column;
     padding: 100px;
 
-    background-color :#23272a;
+    background-color: #23272a;
 }
 
 body > footer .flexContainer:first-child {
@@ -359,13 +359,81 @@ button:hover{
     color: #7289da;    
 }
 
-body > #jumbotronSection .bigButton:last-of-type:hover {
+.blackButton:hover {
     background-color: #36393f;
 }
 
 .purpleButton:hover{
     background-color: rgb(151, 154, 238);
 }
+
+/*DOWNLOAD PAGE STYLING*/
+.download > header {
+    background-color: #23272a;
+}
+
+.download > #jumbotronSection{
+    color: white;
+    background: none;
+    background-color: #23272a;
+}
+
+.download > #jumbotronSection .flexContainer{
+    flex-direction: row;
+}
+
+.download > #jumbotronSection .flexContainer > div{
+    width: 50%;
+    text-align: left;
+}
+
+.download main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #23272a;
+
+    gap: 20px;
+
+    padding: 5rem;
+}
+
+
+.download .card{
+    max-width: 600px;
+    max-height: 700px;
+
+    border-radius: 16px;
+    padding: 2rem 2rem 2rem 2rem;
+
+    background-color: #f6f6f6;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+    
+    margin-top: 20px    ;
+}
+
+.download .blackButton{
+    margin-bottom: 3rem;
+}
+
+.download .blackButton:last-child{
+    margin-top: 1.5rem;
+}
+
+.download main #leftSide .card:last-child{
+    text-align: left;
+}
+
+.download h2{
+    font-size: 1.8rem;
+}
+
+
 
 
 /*DEBUG*/
