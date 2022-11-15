@@ -1,0 +1,214 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: sans-serif;
+}
+
+/*Regole Generali*/
+body > header,
+body > section,
+body > footer
+{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > section {
+    padding: 50px;
+}
+
+.flexContainer {
+    width: 1200px;
+    max-width: 1200px;
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/*Header*/
+body > header {
+    padding: 15px;
+}
+
+body > header *{
+    text-decoration: none;
+    color: black;
+}
+
+body > header > .flexContainer{
+    height: 50px;
+}
+
+body > header > .flexContainer > * {
+    display: flex;
+    align-items: center;
+}
+
+body > header > .flexContainer > div {
+    width: 15%;
+    height: 100%;
+    flex-shrink: 1;
+    padding: 10px;
+}
+
+body > header > .flexContainer > div:nth-of-type(1){
+    justify-content: flex-start;
+}
+
+body > header > .flexContainer > div:nth-of-type(2){
+    justify-content: flex-end;
+}
+
+body > header > .flexContainer > nav {
+    width: 60%;
+    height: 100%;
+    flex-shrink: 2;
+
+    justify-content: center;
+}
+
+body > header > .flexContainer > nav ul {
+    width: 100%;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Jumbotron*/
+body > #jumbotronSection > #jumbotron{
+    width: 910px;
+    height: 400px;
+}
+
+/*Sections*/
+body > section:nth-of-type(even){
+    background-color: white;
+}
+
+body > section:nth-of-type(odd){
+    background-color: lightgray;
+}
+
+body > section .flexContainer > div {
+    height: 500px;
+}
+
+body > section > .flexContainer > .imageContainer{
+    width: 60%;
+}
+
+body > section > .flexContainer > .textContainer{
+    width: 40%;
+}
+
+body > section:last-of-type > .flexContainer{
+    height: 900px;
+}
+
+/*Footer*/
+body > footer{
+    flex-direction: column;
+    padding: 15px;
+}
+
+body > footer .flexContainer:first-child header{
+    width: 30%;
+    height: 580px;
+    background-color:lightcoral;
+}
+
+body > footer hr{
+    margin: 30px 0;
+    width: 1200px;
+}
+
+body > footer .flexContainer:last-child{
+    padding: 20px 0;
+}
+
+body > footer .flexContainer:last-child div {
+    padding: 5px 10px;
+}
+
+body > footer .flexContainer:first-child .linkList{
+    width: calc(70% / 4);
+    height: 580px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*DEBUG*/
+.debug header{
+    background-color: lightblue;
+}
+
+.debug header .flexContainer{
+    background-color: goldenrod;
+}
+
+.debug .flexContainer > div,
+.debug .flexContainer > nav,
+.debug #jumbotron,
+.debug > section:last-of-type > .flexContainer,
+.debug footer .flexContainer:first-child header
+{
+    border: 2px dashed black;
+}
+
+.debug #jumbotronSection{
+    background-color :darkblue;
+}
+
+.debug #jumbotron{ 
+    background-color: violet;
+}
+
+.debug .imageContainer {
+    background-color: dodgerblue;
+}
+
+.debug .textContainer {
+    background-color: pink;
+}
+
+.debug > section:last-of-type > .flexContainer{
+    background-color:forestgreen;
+}
+
+.debug footer{
+    background-color :#23272a;
+}
+
+.debug footer .flexContainer{
+    background-color: aquamarine;
+}
+
+.debug footer .flexContainer:last-child div {
+    background-color: pink;
+}
+
+.debug footer .flexContainer:first-child header{
+    background-color:lightcoral;
+}
+
+.debug footer .flexContainer:first-child .linkList{
+    background-color:lightseagreen;
+    border: 2px dashed white;
+}
