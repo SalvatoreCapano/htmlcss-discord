@@ -1,0 +1,408 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: 'Nunito Sans', sans-serif;
+    cursor: default;
+}
+
+/*Palette
+    header: #255ee9
+    header text: #ffffff
+    blue text: #7289da
+    dark text: #23272a
+    dark button:  //
+    footer:       // 
+    gray sections: #f6f6f6
+*/
+
+/*Regole Generali*/
+body > header,
+body > section,
+body > footer
+{
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body > section {
+    padding: 130px;
+
+    color: #23272a;
+}
+
+.flexContainer {
+    width: 1300px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    max-height: 50px;
+    cursor: pointer;
+}
+
+button{
+    padding: 0.6em 1.3em; 
+    border-radius: 180px;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.smallButton{
+    font-size: 0.9em;
+    font-weight: 600;
+} 
+
+.bigButton{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+h2{
+    font-size: 3em;
+    font-weight: 800;
+    margin-bottom: 0.5em;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+button i {
+    margin-right: 0.4em;
+}
+
+/*Header*/
+body > header {
+    padding: 15px;
+
+    background-color: #255ee9;
+}
+
+body > header *{
+    text-decoration: none;
+    color: white;
+    font-weight: 700;
+}
+
+body > header > .flexContainer{
+    height: 50px;
+}
+
+body > header > .flexContainer > * {
+    display: flex;
+    align-items: center;
+}
+
+body > header > .flexContainer > div {
+    width: 15%;
+    flex-shrink: 1;
+    padding: 10px;
+}
+
+body > header > .flexContainer > #logoContainer{
+    justify-content: flex-start;
+}
+
+body > header > .flexContainer > div:nth-of-type(2){
+    justify-content: flex-end;
+}
+
+body > header button{
+    color: black;
+    background-color: white;
+}
+
+body > header nav {
+    width: 50%;
+
+    flex-shrink: 2;
+    justify-content: center;
+}
+
+body > header nav ul {
+    width: 100%;
+    list-style: none;
+
+    display: flex;
+    justify-content: space-around;
+}
+
+/*Jumbotron*/
+body > #jumbotronSection{
+    background-image: url("../../img/jumbo.png");
+    background-size: cover;
+
+    padding: 110px 0 190px 0;
+}
+
+body > #jumbotronSection > #jumbotron{
+    max-width: 850px;
+
+    text-align: center;
+    color: white;
+}
+
+body > #jumbotronSection h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+
+    margin-bottom: 0.6em;
+}
+
+body > #jumbotronSection button {
+    margin: 0.5em;
+}
+
+body > #jumbotronSection .bigButton:first-of-type {
+    color: #23272a;
+    background-color: white;
+}
+
+body > #jumbotronSection .bigButton:last-of-type {
+    color: white;
+    background-color: #23272a;
+}
+
+/*Sections*/
+body > section:nth-of-type(even){
+    background-color: white;
+}
+
+body > section:nth-of-type(odd){
+    background-color: #f6f6f6;
+}
+
+body > section > .flexContainer > .imageContainer{
+    width: 70%;
+}
+
+body > section > .flexContainer > .textContainer{
+    width: 30%;
+}
+
+body > section:nth-last-of-type(3) > .flexContainer > .imageContainer img{
+    float: right;
+}
+
+body > section > .flexContainer > .textContainer h2{
+    font-size: 3em;
+    font-weight: 800;
+    line-height: 1.1em;  /*line height standard = 1.2em*/
+
+    margin-bottom: 0.5em;
+}
+
+body > section:last-of-type > .flexContainer{
+    flex-direction: column;
+
+    text-align: center;
+}
+
+body > section:last-of-type > .flexContainer p{ 
+    max-width: 90%;
+
+    margin-bottom: 1em;
+}
+
+body > section:last-of-type > .flexContainer img{
+    width: 100%;
+}
+
+body > section:last-of-type > .flexContainer h3{ 
+    font-size: 1.8em;
+    font-weight: 800;
+
+    padding: 1em;
+    margin-bottom: 0.5em;
+
+    background-image: url("../../img/stars.svg");
+    background-size: contain;
+}
+
+body > section:last-of-type button{
+    color: white;
+    background-color: #7289da;
+}
+
+/*Footer*/
+body > footer{
+    flex-direction: column;
+    padding: 100px;
+
+    background-color :#23272a;
+}
+
+body > footer .flexContainer:first-child {
+    align-items: flex-start;
+}
+
+body > footer header{
+    width: 30%;
+    color: white;
+}
+
+body > footer header h3{
+    font-size: 2rem;
+    font-weight: 800;
+    color:#7289da;
+    line-height: 1.1em;
+}
+
+body > footer .flexContainer:first-child img{
+    width: 1.5rem;
+}
+
+body > footer header > div {
+    width: 50%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+body > footer header #languageContainer{
+    margin: 1.25rem 0;
+    font-size: 0.8rem;
+    cursor: pointer;
+}
+
+body > footer header #languageContainer > *{
+    margin-right: 0.25rem;
+}
+
+body > footer header #socialContainer{
+    font-size: 1.3rem;
+}
+
+body > footer header #socialContainer > *{
+    margin-right: 1.5rem;
+    cursor: pointer;
+}
+
+body > footer .linkList{
+    width: calc(70% / 4);
+}
+
+body > footer .linkList h4{
+    color: #7289da;
+    font-weight: 800;
+}
+
+body > footer .linkList ul{
+    list-style: none;
+}
+
+body > footer .linkList ul li{
+    margin: 0.5rem 0;
+}
+
+body > footer .linkList ul li a{
+    color: white;
+    text-decoration: none;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+body > footer hr{
+    margin: 30px 0;
+    width: 1300px;
+
+    border-color:#7289da;
+    border-top: none;
+}
+
+body > footer .flexContainer:last-child{
+    padding: 20px 0;
+}
+ 
+footer .smallButton{
+    background-color: #7289da;
+    color: white;
+}
+
+svg:nth-of-type(1),
+svg:nth-of-type(3) {
+    transform: rotate(180deg);
+    background-color: white;
+    display: block;
+}
+
+svg:nth-of-type(2){
+    background-color: white;
+}
+
+/*DEBUG*/
+.debug header{
+    background-color: lightblue;
+} 
+
+ .debug header .flexContainer{
+    background-color: goldenrod;
+} 
+
+.debug #jumbotronSection{
+    background-color :darkblue;
+}
+
+.debug #jumbotron{ 
+    background-color: violet;
+}
+
+.debug .imageContainer {
+    background-color: dodgerblue;
+}
+
+.debug .textContainer {
+    background-color: pink;
+}
+
+.debug > section:last-of-type > .flexContainer{
+    background-color:forestgreen;
+}
+
+.debug footer .flexContainer:first-child header{
+    background-color:lightcoral;
+}
+
+.debug footer{
+    background-color :#23272a;
+}
+
+.debug footer .flexContainer{
+    background-color: aquamarine;
+}
+
+.debug footer .flexContainer:first-child .linkList{
+    background-color:lightseagreen;
+    border: 2px dashed white;
+}
+
+.debug footer .flexContainer:last-child div {
+    background-color: pink;
+}
+
+.debug .flexContainer > div,
+.debug .flexContainer > nav,
+.debug #jumbotron,
+.debug > section:last-of-type > .flexContainer,
+.debug footer .flexContainer:first-child header
+{
+    border: 2px dashed black;
+}
