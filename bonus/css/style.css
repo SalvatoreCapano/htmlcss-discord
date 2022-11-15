@@ -55,6 +55,8 @@ button{
     border: none;
     font-size: 1.3rem;
     cursor: pointer;
+
+    transition: all 0.2s;
 }
 
 .smallButton{
@@ -65,6 +67,16 @@ button{
 .bigButton{
     font-size: 1.2rem;
     font-weight: 600;
+}
+
+.whiteButton{
+    color: #23272a;
+    background-color: white;
+}
+
+.purpleButton{
+    color: white;
+    background-color: #7289da;
 }
 
 .clearfix::after {
@@ -124,11 +136,6 @@ body > header > .flexContainer > div:nth-of-type(2){
     justify-content: flex-end;
 }
 
-body > header button{
-    color: black;
-    background-color: white;
-}
-
 body > header nav {
     width: 50%;
 
@@ -168,11 +175,6 @@ body > #jumbotronSection h1 {
 
 body > #jumbotronSection button {
     margin: 0.5em;
-}
-
-body > #jumbotronSection .bigButton:first-of-type {
-    color: #23272a;
-    background-color: white;
 }
 
 body > #jumbotronSection .bigButton:last-of-type {
@@ -234,11 +236,6 @@ body > section:last-of-type > .flexContainer h3{
 
     background-image: url("../../img/stars.svg");
     background-size: contain;
-}
-
-body > section:last-of-type button{
-    color: white;
-    background-color: #7289da;
 }
 
 /*Footer*/
@@ -347,6 +344,29 @@ svg:nth-of-type(3) {
 svg:nth-of-type(2){
     background-color: white;
 }
+
+/*Effetti Hover*/
+li:hover a{
+    cursor: pointer;
+    border-bottom: 1px solid white;
+}
+
+button:hover{
+    box-shadow: 0px 4px 11px 4px rgba(0, 0, 0, 0.2);
+}
+
+.whiteButton:hover{
+    color: #7289da;    
+}
+
+body > #jumbotronSection .bigButton:last-of-type:hover {
+    background-color: #36393f;
+}
+
+.purpleButton:hover{
+    background-color: rgb(151, 154, 238);
+}
+
 
 /*DEBUG*/
 .debug header{
