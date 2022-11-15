@@ -5,6 +5,7 @@
     box-sizing: border-box;
 
     font-family: 'Nunito Sans', sans-serif;
+    cursor: default;
 }
 
 /*Palette
@@ -37,8 +38,7 @@ body > section {
 
 .flexContainer {
     width: 1300px;
-    /* max-width: 1300px; */
-    
+
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -46,6 +46,7 @@ body > section {
 
 .logo{
     max-height: 50px;
+    cursor: pointer;
 }
 
 button{
@@ -53,6 +54,17 @@ button{
     border-radius: 180px;
     border: none;
     font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.smallButton{
+    font-size: 0.9em;
+    font-weight: 600;
+} 
+
+.bigButton{
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 .clearfix::after {
@@ -65,6 +77,11 @@ h2{
     font-size: 3em;
     font-weight: 800;
     margin-bottom: 0.5em;
+}
+
+p{
+    font-size: 1.2rem;
+    font-weight: 600;
 }
 
 button i {
@@ -95,12 +112,11 @@ body > header > .flexContainer > * {
 
 body > header > .flexContainer > div {
     width: 15%;
-    height: 100%;
     flex-shrink: 1;
     padding: 10px;
 }
 
-body > header > .flexContainer > div:nth-of-type(1){
+body > header > .flexContainer > #logoContainer{
     justify-content: flex-start;
 }
 
@@ -108,23 +124,19 @@ body > header > .flexContainer > div:nth-of-type(2){
     justify-content: flex-end;
 }
 
-.smallButton{
-    font-size: 0.9em;
-    font-weight: 600;
+body > header button{
     color: black;
-
     background-color: white;
-} 
+}
 
-body > header > .flexContainer > nav {
+body > header nav {
     width: 50%;
-    height: 100%;
 
     flex-shrink: 2;
     justify-content: center;
 }
 
-body > header > .flexContainer > nav ul {
+body > header nav ul {
     width: 100%;
     list-style: none;
 
@@ -137,15 +149,13 @@ body > #jumbotronSection{
     background-image: url("../img/jumbo.png");
     background-size: cover;
 
-    padding: 110px;
-    padding-bottom: 190px;
+    padding: 110px 0 190px 0;
 }
 
 body > #jumbotronSection > #jumbotron{
-    width: 850px;
-    min-height: 100px;
-    text-align: center;
+    max-width: 850px;
 
+    text-align: center;
     color: white;
 }
 
@@ -156,19 +166,16 @@ body > #jumbotronSection h1 {
     margin-bottom: 0.6em;
 }
 
-body > #jumbotronSection p {
-    font-size: 1.2em;
-    font-weight: 600;
-}
-
 body > #jumbotronSection button {
-    /* font-size: 1.2em; */
-    font-weight: 600;
-
     margin: 0.5em;
 }
 
-body > #jumbotronSection button:last-child {
+body > #jumbotronSection .bigButton:first-of-type {
+    color: #23272a;
+    background-color: white;
+}
+
+body > #jumbotronSection .bigButton:last-of-type {
     color: white;
     background-color: #23272a;
 }
@@ -182,56 +189,34 @@ body > section:nth-of-type(odd){
     background-color: #f6f6f6;
 }
 
-body > section .flexContainer > div {
-    height: 500px;
-}
-
 body > section > .flexContainer > .imageContainer{
     width: 70%;
-}
-
-body > section:nth-last-of-type(3) > .flexContainer > .imageContainer img{
-    float: right;
-}
-
-body > section > .flexContainer > .imageContainer img{
-    height: 100%;
 }
 
 body > section > .flexContainer > .textContainer{
     width: 30%;
 }
 
+body > section:nth-last-of-type(3) > .flexContainer > .imageContainer img{
+    float: right;
+}
+
 body > section > .flexContainer > .textContainer h2{
     font-size: 3em;
     font-weight: 800;
-    margin-bottom: 0.5em;
     line-height: 1.1em;  /*line height standard = 1.2em*/
 
-    
-}
-
-body > section > .flexContainer > .textContainer p{
-    font-size: 1.2em;
-    font-weight: 600;
-    
+    margin-bottom: 0.5em;
 }
 
 body > section:last-of-type > .flexContainer{
     flex-direction: column;
-    justify-content: flex-start;
 
     text-align: center;
 }
 
-body > section:last-of-type > .flexContainer h2{ 
-    font-size: 3em;
-}
-
 body > section:last-of-type > .flexContainer p{ 
     max-width: 90%;
-    font-size: 1.2em;
-    font-weight: 600;
 
     margin-bottom: 1em;
 }
@@ -241,20 +226,19 @@ body > section:last-of-type > .flexContainer img{
 }
 
 body > section:last-of-type > .flexContainer h3{ 
-    /* background-color: red; */
     font-size: 1.8em;
     font-weight: 800;
+
     padding: 1em;
     margin-bottom: 0.5em;
+
     background-image: url("../img/stars.svg");
     background-size: contain;
 }
 
 body > section:last-of-type button{
-    background-color: #7289da;
     color: white;
-
-    font-size: 1.3rem;
+    background-color: #7289da;
 }
 
 /*Footer*/
@@ -265,9 +249,12 @@ body > footer{
     background-color :#23272a;
 }
 
+body > footer .flexContainer:first-child {
+    align-items: flex-start;
+}
+
 body > footer header{
     width: 30%;
-
     color: white;
 }
 
@@ -275,7 +262,7 @@ body > footer header h3{
     font-size: 2rem;
     font-weight: 800;
     color:#7289da;
-    line-height: 2.3rem;
+    line-height: 1.1em;
 }
 
 body > footer .flexContainer:first-child img{
@@ -293,6 +280,7 @@ body > footer header > div {
 body > footer header #languageContainer{
     margin: 1.25rem 0;
     font-size: 0.8rem;
+    cursor: pointer;
 }
 
 body > footer header #languageContainer > *{
@@ -305,38 +293,37 @@ body > footer header #socialContainer{
 
 body > footer header #socialContainer > *{
     margin-right: 1.5rem;
+    cursor: pointer;
 }
 
-body > footer .flexContainer:first-child {
-    align-items: flex-start;
-}
-
-body > footer .flexContainer:first-child .linkList{
+body > footer .linkList{
     width: calc(70% / 4);
 }
 
-body > footer .flexContainer:first-child .linkList h4{
+body > footer .linkList h4{
     color: #7289da;
     font-weight: 800;
 }
 
-body > footer .flexContainer:first-child .linkList ul{
+body > footer .linkList ul{
     list-style: none;
 }
 
-body > footer .flexContainer:first-child .linkList ul li{
+body > footer .linkList ul li{
     margin: 0.5rem 0;
 }
 
-body > footer .flexContainer:first-child .linkList ul li a{
+body > footer .linkList ul li a{
     color: white;
     text-decoration: none;
     font-weight: 700;
+    cursor: pointer;
 }
 
 body > footer hr{
     margin: 30px 0;
     width: 1300px;
+
     border-color:#7289da;
     border-top: none;
 }
@@ -350,21 +337,8 @@ footer .smallButton{
     color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*DEBUG*/
-/* .debug header{
+.debug header{
     background-color: lightblue;
 } 
 
@@ -404,7 +378,6 @@ footer .smallButton{
     background-color: aquamarine;
 }
 
-
 .debug footer .flexContainer:first-child .linkList{
     background-color:lightseagreen;
     border: 2px dashed white;
@@ -414,7 +387,7 @@ footer .smallButton{
     background-color: pink;
 }
 
- .debug .flexContainer > div,
+.debug .flexContainer > div,
 .debug .flexContainer > nav,
 .debug #jumbotron,
 .debug > section:last-of-type > .flexContainer,
@@ -422,5 +395,3 @@ footer .smallButton{
 {
     border: 2px dashed black;
 }
-
-*/
