@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
 
-    font-family: sans-serif;
+    font-family: 'Nunito Sans', sans-serif;
 }
 
 /*Palette
@@ -34,22 +34,35 @@ body > section {
 }
 
 .flexContainer {
-    width: 1200px;
-    max-width: 1200px;
+    width: 1300px;
+    /* max-width: 1300px; */
     
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
+.logo{
+    max-height: 50px;
+}
+
+button{
+    padding: 0.6em 1em; 
+    border-radius: 180px;
+    border: none;
+}
+
 /*Header*/
 body > header {
     padding: 15px;
+
+    background-color: #3161e0;
 }
 
 body > header *{
     text-decoration: none;
-    color: black;
+    color: white;
+    font-weight: 700;
 }
 
 body > header > .flexContainer{
@@ -76,8 +89,16 @@ body > header > .flexContainer > div:nth-of-type(2){
     justify-content: flex-end;
 }
 
+body > header button{
+    font-size: 0.9em;
+    font-weight: 600;
+    color: black;
+
+    background-color: white;
+} 
+
 body > header > .flexContainer > nav {
-    width: 60%;
+    width: 50%;
     height: 100%;
     flex-shrink: 2;
 
@@ -165,16 +186,16 @@ body > footer .flexContainer:first-child .linkList{
 
 
 /*DEBUG*/
-.debug header{
+/* .debug header{
     background-color: lightblue;
-}
+} 
 
-.debug header .flexContainer{
+ .debug header .flexContainer{
     background-color: goldenrod;
-}
+} 
 
-.debug .flexContainer > div,
-.debug .flexContainer > nav,
+ .debug .flexContainer > div,
+.debug .flexContainer > nav, */
 .debug #jumbotron,
 .debug > section:last-of-type > .flexContainer,
 .debug footer .flexContainer:first-child header
